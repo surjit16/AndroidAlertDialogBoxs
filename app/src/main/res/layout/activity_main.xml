@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/margin_default"
+    android:orientation="vertical"
     tools:context="com.example.surjit.androidalertdialogboxs.MainActivity">
 
     <!--Simple Android Alert Dialog Box-->
@@ -12,5 +13,12 @@
         android:layout_height="wrap_content"
         android:onClick="simpleAlertDialogBox"
         android:text="@string/simple_alert_dialog_box" />
+
+    <!--Alert Dialog Box With List Items for Select -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alertDialogBoxSelectItems"
+        android:text="@string/alert_dialog_box_select_items" />
 
 </LinearLayout>
