@@ -2,4 +2,5 @@
     <string name="app_name">AndroidAlertDialogBox\'s</string>
     <string name="simple_alert_dialog_box">Simple Alert Dialog Box</string>
     <string name="alert_dialog_box_select_items">Alert Dialog Box - Select Items</string>
+    <string name="alert_dialog_box_single_choice_items">Alert Dialog Box - Single Choice Items</string>
 </resources>

@@ -21,4 +21,11 @@
         android:onClick="alertDialogBoxSelectItems"
         android:text="@string/alert_dialog_box_select_items" />
 
+    <!--Alert Dialog Box With Single Choice Items for Select -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alertDialogBoxSingleChoiceItems"
+        android:text="@string/alert_dialog_box_single_choice_items" />
+
 </LinearLayout>

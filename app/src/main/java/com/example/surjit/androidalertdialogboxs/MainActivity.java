@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         alertDialog.setCancelable(false);
 
-        alertDialog.setTitle(R.string.alert_dialog_box_select_items);
+        alertDialog.setTitle(R.string.alert_dialog_box_single_choice_items);
 
         alertDialog.setItems(stringArray, new DialogInterface.OnClickListener() {
             @Override
@@ -78,6 +78,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 toast = Toast.makeText(MainActivity.this, "You Clicked No Button", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        alertDialog.show();
+    }
+
+    public void alertDialogBoxSingleChoiceItems(View view) {
+        final String[] stringArray = new String[]{"Surjit Singh", "Abhishek", "Jatinder", "PJ"};
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+
+        alertDialog.setTitle(R.string.alert_dialog_box_single_choice_items);
+
+        alertDialog.setSingleChoiceItems(stringArray, 0, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                toast = Toast.makeText(MainActivity.this, stringArray[i] + " is selected", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                toast = Toast.makeText(MainActivity.this, "You Clicked No Button", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                toast = Toast.makeText(MainActivity.this, "You Clicked Yes Button", Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
