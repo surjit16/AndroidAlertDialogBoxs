@@ -118,4 +118,48 @@ public class MainActivity extends AppCompatActivity {
 
         alertDialog.show();
     }
+
+    public void alertDialogBoxMultiChoiceItems(View view) {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+
+        alertDialog.setTitle("Demo");
+
+        alertDialog.setMultiChoiceItems(R.array.multi_choice_list, null, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i, boolean b) {
+                String[] stringArray = getResources().getStringArray(R.array.multi_choice_list);
+
+                toast = Toast.makeText(MainActivity.this, stringArray[i] + " : " + b, Toast.LENGTH_LONG);
+                toast.show();
+            }
+        });
+
+        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                toast = Toast.makeText(MainActivity.this, "You Clicked No Button", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                toast = Toast.makeText(MainActivity.this, "You Clicked Yes Button", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+
+        alertDialog.setNeutralButton("Neutral", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                toast = Toast.makeText(MainActivity.this, "You Clicked Neutral Button", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        alertDialog.show();
+    }
 }

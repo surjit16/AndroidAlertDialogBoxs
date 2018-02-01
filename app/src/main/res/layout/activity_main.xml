@@ -28,4 +28,11 @@
         android:onClick="alertDialogBoxSingleChoiceItems"
         android:text="@string/alert_dialog_box_single_choice_items" />
 
+    <!--Alert Dialog Box With Multi Choice Items for Select -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alertDialogBoxMultiChoiceItems"
+        android:text="@string/alert_dialog_box_multi_choice_items" />
+
 </LinearLayout>
