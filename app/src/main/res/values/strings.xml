@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidAlertDialogBox\'s</string>
+    <string name="simple_alert_dialog_box">Simple Alert Dialog Box</string>
 </resources>
